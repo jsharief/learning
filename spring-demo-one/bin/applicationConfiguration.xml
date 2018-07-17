@@ -1,0 +1,42 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- Loading the file -->
+	<context:property-placeholder location="classpath:sport.properties"/>
+ 
+ <!-- Define your beans here -->
+ 
+ <!-- Constructor Injection -->
+ 
+ <bean id="theCoach" class="com.luv2code.springdemo.CricketCoach">
+ 	
+ 	<constructor-arg ref="fortuneService" > </constructor-arg>
+ 	<property name="team" value="Zimbabwe"></property>
+ 	<property name="emailAddress" value="adarshmani@zimbabwe.com"></property>
+  </bean>
+ 
+ 
+<bean id="fortuneService" class="com.luv2code.springdemo.HappyFortuneService">
+
+ </bean>
+ 
+ 
+ <!-- Setter Injection -->
+
+ <bean id="baseCoach" class="com.luv2code.springdemo.BaseBallCoach">
+ 
+ 	<property name="fortuneService" ref="fortuneService" ></property>
+ 	<property name="team" value="${foo.team}"></property>	
+ 	<property name="email" value="${foo.email}"></property>	
+ 	 
+ </bean>
+ 
+ 
+ 
+	
+</beans>
