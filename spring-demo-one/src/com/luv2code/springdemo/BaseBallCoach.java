@@ -84,6 +84,17 @@ public class BaseBallCoach implements Coach {
 		return fortuneService.getRandomFortune();
 	}
 	
-	
+
+   public void doStart() {
+	   
+	   System.out.println("this method is the initialization of this component");
+	   
+   }
+   
+   public void doStop() {
+	   
+	   System.out.println("this method is the destroying of this component");
+		
+   }
 	
 }
