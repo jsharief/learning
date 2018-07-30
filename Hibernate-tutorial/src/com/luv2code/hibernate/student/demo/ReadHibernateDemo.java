@@ -26,7 +26,7 @@ public class ReadHibernateDemo {
 			
 			System.out.println(S.getFirstName() + " " + S.getEmail());
 		//	
-			session.createQuery("from Student s where  )
+			session.createQuery("from Student s where " );
 			
 			session.getTransaction().commit();
 			
