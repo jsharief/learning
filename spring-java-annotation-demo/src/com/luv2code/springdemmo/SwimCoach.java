@@ -1,8 +1,13 @@
 package com.luv2code.springdemmo;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class SwimCoach implements Coach {
 	
 	FortuneService fortuneService;
+	
+	@Value("${swim.email}")
+	private String email;
 	
 
 	public SwimCoach(FortuneService pFortuneService) {
@@ -24,4 +29,14 @@ public class SwimCoach implements Coach {
 		return fortuneService.getFortune();
 	}
 
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+ 
 }

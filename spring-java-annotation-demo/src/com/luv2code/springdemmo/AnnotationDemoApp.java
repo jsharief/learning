@@ -14,6 +14,7 @@ public class AnnotationDemoApp {
 		TennisCoach coach3 = applicationContext.getBean("tennisCoach",TennisCoach.class);
 		
 		Coach swimCoach = applicationContext.getBean("swimCoach",Coach.class);
+		SwimCoach swimCoacher = applicationContext.getBean("swimCoach",SwimCoach.class);
 		
 		
 		
@@ -28,6 +29,7 @@ public class AnnotationDemoApp {
 		System.out.println(coach3.getEmail());
 		System.out.println(swimCoach.getDailyWorkOut());
 		System.out.println(swimCoach.getFortune());
+		System.out.println(swimCoacher.getEmail());
 		
 	
 	}
