@@ -1,6 +1,5 @@
 package com.luv2code.hibernate.student.demo;
 
-import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -22,11 +21,11 @@ public class ReadHibernateDemo {
 			
 			session.beginTransaction();
 			
-			Student S = session.get(Student.class, 1);
+			Student S = session.get(Student.class, 2);
 			
 			System.out.println(S.getFirstName() + " " + S.getEmail());
 		//	
-			session.createQuery("from Student s where " );
+		//	session.createQuery("from Student s where " );
 			
 			session.getTransaction().commit();
 			
